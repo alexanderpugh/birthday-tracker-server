@@ -28,6 +28,8 @@ module.exports = {
     const jsonResponse = {};
 
     try {
+      throw new Error('Signing up is currently disabled');//TODO remove
+      
       const token = await register(req.body);
 
       jsonResponse.success = true;
